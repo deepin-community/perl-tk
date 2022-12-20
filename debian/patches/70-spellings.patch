@@ -1,0 +1,377 @@
+Fix spelling errors in comments and man pages
+--- a/pTk/mTk/win/tkWinFont.c
++++ b/pTk/mTk/win/tkWinFont.c
+@@ -250,7 +250,7 @@
+     if (TkWinGetPlatformId() == VER_PLATFORM_WIN32_NT) {
+ 	/*
+ 	 * If running NT, then we will be calling some Unicode functions
+-	 * explictly.  So, even if the Tcl system encoding isn't Unicode,
++	 * explicitly.  So, even if the Tcl system encoding isn't Unicode,
+ 	 * make sure we convert to/from the Unicode char set.
+ 	 */
+ 
+--- a/pod/tixWm.pod
++++ b/pod/tixWm.pod
+@@ -27,7 +27,7 @@
+ widget. Normally this command is called to convert a L<Toplevel|Tk::Toplevel> widget
+ into a L<Frame|Tk::Frame> widget. The newly-converted frame widget is
+ un-mapped from the screen. To make it appear inside its parent, you
+-must call a geometry manager (e.g. grid or pack) explictly.
++must call a geometry manager (e.g. grid or pack) explicitly.
+ 
+ =item I<$widget>-E<gt>B<wmRelease>
+ 
+--- a/pod/mega.pod
++++ b/pod/mega.pod
+@@ -345,7 +345,7 @@
+ method with this name.  Therefore one can't ``I<delegate>''
+ any of the methods listed in L<Tk::Widget|Tk::Widget>.
+ A common problematic method is B<bind>.  In this case
+-one as to explicitely redirect the method.
++one as to explicitly redirect the method.
+ 
+   sub bind {
+       my $self = shift;
+--- a/pod/UserGuide.pod
++++ b/pod/UserGuide.pod
+@@ -504,7 +504,7 @@
+ Semantically nothing changes, as the series of codepoints stays the
+ same, but things will change when variables with high-bit iso-8859-1
+ characters will be passed to the "outer" world. In this case you have
+-to explicitely mark the encoding of your output stream if using IO, or
++to explicitly mark the encoding of your output stream if using IO, or
+ encode the variables using L<Encode> for other style of communication.
+ 
+ This is the theory, now some examples.
+--- a/PNG/zlib/as400/readme.txt
++++ b/PNG/zlib/as400/readme.txt
+@@ -106,6 +106,6 @@
+ 
+         Remember that most foreign textual data are ASCII coded: this
+                 implementation does not handle conversion from/to ASCII, so
+-                text data code conversions must be done explicitely.
++                text data code conversions must be done explicitly.
+ 
+         Always open zipped files in binary mode.
+--- a/pod/after.pod
++++ b/pod/after.pod
+@@ -62,7 +62,7 @@
+ 
+ =head1 Changing a B<repeat> timer interval 
+ 
+-It's posible to change a B<repeat> timer's delay value, or even cancel
++It's possible to change a B<repeat> timer's delay value, or even cancel
+ any timer, using the B<time> method. If I<delay> is specified and
+ non-zero, a new timer delay is established.  If I<delay> is zero the
+ timer event is canceled just as if I<$id>-E<gt>B<cancel> were invoked.
+--- a/pod/TODO
++++ b/pod/TODO
+@@ -510,7 +510,7 @@
+ 	o Describe how emulate bind in your callback handling
+ 	o Ev() example/explanations better moved to Tk::bind ?
+ 	o BUGS entry?: Missing is a -callback switch that treats
+-	  callbacks as bind does automaticly
++	  callbacks as bind does automatically
+ 
+ configspec:
+ 
+--- a/ptksh
++++ b/ptksh
+@@ -57,7 +57,7 @@
+ 
+ ptksh is a perl/Tk shell to enter perl commands
+ interactively.  When one starts ptksh a L<MainWindow|Tk::MainWindow>
+-is automaticly created, along with a ptksh command window.
++is automatically created, along with a ptksh command window.
+ One can access the main window by typing commands using the
+ variable $mw at the 'ptksh> ' prompt of the command window.
+ 
+--- a/pod/X11Font.pod
++++ b/pod/X11Font.pod
+@@ -21,7 +21,7 @@
+ =head1 DESCRIPTION
+ 
+    This module can be use to interrogate the X server what fonts are
+-   avaliable.
++   available.
+ 
+ =head1 METHODS
+ 
+--- a/pod/Wm.pod
++++ b/pod/Wm.pod
+@@ -268,7 +268,7 @@
+ display rubbish in their transparent parts.
+ 
+ The sizes of images that can be used as icons in this manner are platform
+-dependant. On Win32 this sets the "large" icon, which should be 32x32, it
++dependent. On Win32 this sets the "large" icon, which should be 32x32, it
+ will automatically be scaled down to 16x16 for use as a small icon.
+ 
+ =item I<$toplevel>-E<gt>B<iconmask>(?I<bitmap>?)
+@@ -559,7 +559,7 @@
+ =head1 ICON SIZES
+ 
+ The sizes of bitmaps/images that can be used as icons in this manner are platform
+-and window manager dependant. Unix window managers are typically more tolerant
++and window manager dependent. Unix window managers are typically more tolerant
+ than Win32. It is possible that coloured C<iconimage> icons may cause problems
+ on some X window managers.
+ 
+--- a/pod/Text.pod
++++ b/pod/Text.pod
+@@ -47,7 +47,7 @@
+ using any of the standard forms for screen distances.
+ If a line wraps, this option only applies to the first line
+ on the display.
+-This option may be overriden with B<-spacing1> options in
++This option may be overridden with B<-spacing1> options in
+ tags.
+ 
+ =item Name:	B<spacing2>
+@@ -60,7 +60,7 @@
+ display) this option specifies additional space to provide between
+ the display lines that represent a single line of text.
+ The value may have any of the standard forms for screen distances.
+-This option may be overriden with B<-spacing2> options in
++This option may be overridden with B<-spacing2> options in
+ tags.
+ 
+ =item Name:	B<spacing3>
+@@ -73,7 +73,7 @@
+ using any of the standard forms for screen distances.
+ If a line wraps, this option only applies to the last line
+ on the display.
+-This option may be overriden with B<-spacing3> options in
++This option may be overridden with B<-spacing3> options in
+ tags.
+ 
+ =item Name:	B<state>
+--- a/pod/Canvas.pod
++++ b/pod/Canvas.pod
+@@ -82,8 +82,8 @@
+ state option, which overrides the default state. Many options can take
+ separate specifications such that the appearance of the item can be different
+ in different situations. The options that start with "active" control the
+-appearence when the mouse pointer is over it, while the option starting
+-with "disabled" controls the appearence when the state is disabled.
++appearance when the mouse pointer is over it, while the option starting
++with "disabled" controls the appearance when the state is disabled.
+ 
+ =item Name:	B<width>
+ 
+--- a/pod/Font.pod
++++ b/pod/Font.pod
+@@ -350,7 +350,7 @@
+ on all platforms (as it did on Win32), while previously on X systems it returned
+ a list of fonts that matched an under-specified pattern.
+ 
+-Briefly the methods supported for compatibilty are as follows:
++Briefly the methods supported for compatibility are as follows:
+ 
+ =over 4
+ 
+--- a/pTk/tcl.h
++++ b/pTk/tcl.h
+@@ -2303,7 +2303,7 @@
+ 
+ /*
+  * These function have been renamed. The old names are deprecated, but we
+- * define these macros for backwards compatibilty.
++ * define these macros for backwards compatibility.
+  */
+ #define Tcl_Ckalloc Tcl_Alloc
+ #define Tcl_Ckfree Tcl_Free
+--- a/pTk/mTk/tclGeneric/tcl.h
++++ b/pTk/mTk/tclGeneric/tcl.h
+@@ -1627,7 +1627,7 @@
+ 
+ /*
+  * These function have been renamed. The old names are deprecated, but we
+- * define these macros for backwards compatibilty.
++ * define these macros for backwards compatibility.
+  */
+ 
+ #define Tcl_Ckalloc Tcl_Alloc
+--- a/pTk/mTk/tclGeneric/tclCmdIL.c
++++ b/pTk/mTk/tclGeneric/tclCmdIL.c
+@@ -1625,7 +1625,7 @@
+ 	/*
+ 	 * If "info procs" worked like "info commands", returning the
+ 	 * commands also seen in the global namespace, then you would
+-	 * include this code.  As this could break backwards compatibilty
++	 * include this code.  As this could break backwards compatibility
+ 	 * with 8.0-8.2, we decided not to "fix" it in 8.3, leaving the
+ 	 * behavior slightly different.
+ 	 */
+--- a/Tixish/NoteBook.pm
++++ b/Tixish/NoteBook.pm
+@@ -28,7 +28,7 @@
+ {
+  my ($class,$mw) = @_;
+  # class binding does not work right due to extra level of
+- # widget hierachy
++ # widget hierarchy
+  $mw->bind($class,'<ButtonPress-1>', ['MouseDown',Ev('x'),Ev('y')]);
+  $mw->bind($class,'<ButtonRelease-1>', ['MouseUp',Ev('x'),Ev('y')]);
+ 
+--- a/Tk/Adjuster.pm
++++ b/Tk/Adjuster.pm
+@@ -10,7 +10,7 @@
+ # Construct Tk::Widget 'packAdjust';
+ 
+ # because if managed object is Derived (e.g. a Scrolled) then our 'new'
+-# will be delegated and hierachy gets turned inside-out
++# will be delegated and hierarchy gets turned inside-out
+ # So packAdjust is autoloaded in Widget.pm
+ 
+ 
+--- a/Tk/Widget.pm
++++ b/Tk/Widget.pm
+@@ -568,7 +568,7 @@
+ 
+ # walk and descendants adapted from Stephen's composite
+ # versions as they only use core features they can go here.
+-# hierachy is reversed in that descendants calls walk rather
++# hierarchy is reversed in that descendants calls walk rather
+ # than vice versa as this avoids building a list.
+ # Walk should possibly be enhanced so allow early termination
+ # like '-prune' of find.
+--- a/pod/HList.pod
++++ b/pod/HList.pod
+@@ -245,7 +245,7 @@
+ The HList widget can be used to display any data that have a
+ hierarchical structure, for example, file system directory trees. The
+ list entries are indented and connected by branch lines according to
+-their places in the hierachy.
++their places in the hierarchy.
+ 
+ Each list entry is identified by an B<entryPath>. The entryPath is a
+ sequence of B<entry names> separated by the separator charactor
+--- a/pod/Widget.pod
++++ b/pod/Widget.pod
+@@ -50,7 +50,7 @@
+ capitals are assumed to be classes;  as a result, Tk may not
+ be able to find some options for the application.
+ If sends have been disabled by deleting the B<send> command,
+-this command will reenable them and recreate the B<send>
++this command will re-enable them and recreate the B<send>
+ command.
+ 
+ =item I<$widget>-E<gt>B<atom>(I<name>)
+@@ -448,7 +448,7 @@
+ but it can be changed at any time.  Measurements made
+ after the scaling factor is changed will use the new scaling factor, but it
+ is undefined whether existing widgets will resize themselves dynamically to
+-accomodate the new scaling factor.
++accommodate the new scaling factor.
+ 
+ =item I<$widget>-E<gt>B<screen>
+ 
+@@ -667,7 +667,7 @@
+ 
+ =head1 CAVEATS
+ 
+-The above documentaion on generic methods is incomplete.
++The above documentation on generic methods is incomplete.
+ 
+ =head1 KEYWORDS
+ 
+--- a/pod/LabFrame.pod
++++ b/pod/LabFrame.pod
+@@ -15,7 +15,7 @@
+ 
+ =head1 DESCRIPTION
+ 
+-B<LabFrame> is exactly like B<Frame> and additionaly allows to
++B<LabFrame> is exactly like B<Frame> and additionally allows one to
+ add a label to the frame.
+ 
+ =head1 WIDGET-OPTIONS
+--- a/pod/Listbox.pod
++++ b/pod/Listbox.pod
+@@ -734,7 +734,7 @@
+ 
+ this will return the currently selected elements, in this case "b".
+ 
+-However, if the "ReturnType" arguement is passed when tying the Listbox to the
++However, if the "ReturnType" argument is passed when tying the Listbox to the
+ scalar with value "index" then the indices of the selected elements will be
+ returned instead of the elements themselves, ie in this case "1". This can be
+ useful when manipulating both contents and selected elements in the Listbox at
+--- a/pod/Menu.pod
++++ b/pod/Menu.pod
+@@ -733,7 +733,7 @@
+ 
+ =item B<Pulldown Menus in Menu Buttons>
+ 
+-This is the compatable way to do menu bars.  You create one menubutton
++This is the compatible way to do menu bars.  You create one menubutton
+ widget for each top-level menu, and typically you arrange a series of
+ menubuttons in a row in a menubar window.  You also create the top-level menus
+ and any cascaded submenus, and tie them together with B<-menu>
+--- a/Event/pTkCallback.c
++++ b/Event/pTkCallback.c
+@@ -22,7 +22,7 @@
+    - Simple case of ref to CV
+    - A ref to an AV, 1st element is "method" rest are
+    args to be passed on EACH call (before/after any Tk args ?)
+-   Akin to fact that TCL/TK evals an arbitary string
++   Akin to fact that TCL/TK evals an arbitrary string
+    (Perl code could pre-scan args and convert Malcolm's
+    -method/-slave into this form.)
+    - Special case of a "window" reference, treat 1st arg
+--- a/Tk/Pane.pm
++++ b/Tk/Pane.pm
+@@ -453,7 +453,7 @@
+ 
+ =item I<$pane>-E<gt>B<see>(I<$widget> ?,I<options>?)
+ 
+-Adjusts the view so that I<$widget> is visable. Aditional parameters in
++Adjusts the view so that I<$widget> is visable. Additional parameters in
+ I<options-value> pairs can be passed, each I<option-value> pair must be
+ one of the following
+ 
+--- a/pTk/mTk/generic/tkText.h
++++ b/pTk/mTk/generic/tkText.h
+@@ -393,7 +393,7 @@
+     int affectsDisplay;		/* Non-zero means that this tag affects the
+ 				 * way information is displayed on the screen
+ 				 * (so need to redisplay if tag changes). */
+-    Tcl_Obj * userData;		/* arbitary user data */
++    Tcl_Obj * userData;		/* arbitrary user data */
+ } TkTextTag;
+ 
+ #define TK_TAG_AFFECTS_DISPLAY	0x1
+--- a/pod/Scrollbar.pod
++++ b/pod/Scrollbar.pod
+@@ -225,7 +225,7 @@
+ The scrollbar makes the notification by evaluating a callback
+ specified as the scrollbar's B<-command> option.
+ The callback may take several forms.
+-In each case, the intial arguments passed are those
++In each case, the initial arguments passed are those
+ specified in the B<-command> callback itself,
+ which usually has a form like [B<yview> =E<gt> I<$widget>].
+ (Which will invoke I<$widget>-E<gt>B<yview>(...) where
+--- a/pod/Table.pod
++++ b/pod/Table.pod
+@@ -35,7 +35,7 @@
+ =head1 DESCRIPTION
+ 
+ Tk::Table is an all-perl widget/geometry manager which allows a two dimensional
+-table of arbitary perl/Tk widgets to be displayed.
++table of arbitrary perl/Tk widgets to be displayed.
+ 
+ Entries in the Table are simply ordinary perl/Tk widgets. They should
+ be created with the Table as their parent. Widgets are positioned in the
+--- a/pTk/mTk/tclUnix/tclLoadShl.c
++++ b/pTk/mTk/tclUnix/tclLoadShl.c
+@@ -64,7 +64,7 @@
+      * The flags below used to be BIND_IMMEDIATE; they were changed at
+      * the suggestion of Wolfgang Kechel (wolfgang@prs.de): "This
+      * enables verbosity for missing symbols when loading a shared lib
+-     * and allows to load libtk8.0.sl into tclsh8.0 without problems.
++     * and allows one to load libtk8.0.sl into tclsh8.0 without problems.
+      * In general, this delays resolving symbols until they are actually
+      * needed.  Shared libs do no longer need all libraries linked in
+      * when they are build."

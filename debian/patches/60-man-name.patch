@@ -1,0 +1,12 @@
+Fix Lintian "manpage-has-bad-whatis-entry"
+Each thing listed must not contain spaces; so use underscore instead.
+--- a/pod/Tcl-perl.pod
++++ b/pod/Tcl-perl.pod
+@@ -1,6 +1,6 @@
+ =head1 NAME
+ 
+-Tcl vs perl - very old suspect documentation on porting.
++Tcl_vs_perl - very old suspect documentation on porting.
+ 
+ =for category Other Modules and Languages
+ 

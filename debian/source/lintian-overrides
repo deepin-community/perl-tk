@@ -1,0 +1,4 @@
+perl-tk source: outdated-autotools-helper-file PNG/libpng/config.sub 2005-12-23
+perl-tk source: outdated-autotools-helper-file PNG/libpng/config.guess 2005-12-23
+# The above two files, while present in the package, are not used (or built) and
+# thus can be safely ignored.
